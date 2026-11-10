@@ -1,0 +1,15 @@
+{
+  "Information": [
+    "This file saves deployment settings so you don't have to re-type them."
+  ],
+  "profile": "default",
+  "region": "us-east-1",
+  "configuration": "Release",
+  "framework": "net10.0",
+  //"package-type": "image",
+  "s3-bucket": "tribolet-demo-bucket",
+  "stack-name": "MyModernNetWebsiteStack",
+  "function-architecture": "x86_64",
+  "template": "serverless.template",
+  "template-parameters": ""
+}

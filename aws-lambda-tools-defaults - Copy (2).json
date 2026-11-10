@@ -1,0 +1,13 @@
+{
+  "profile": "default",
+  "region": "us-east-2",
+  "configuration": "Release",
+  "framework": "net10.0",
+  "function-name": "MyApp",
+  "function-handler": "MyApp",
+  "function-runtime": "dotnet10.0",
+  "function-memory-size": 512,
+  "function-timeout": 30,
+  "function-url-enable": true,
+  "function-url-auth": "NONE"
+}

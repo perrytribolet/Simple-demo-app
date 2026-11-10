@@ -1,0 +1,46 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Transform": "AWS::Serverless-2016-10-31",
+  "Description": "An AWS Serverless Application hosting an ASP.NET Core website via Docker container.",
+  "Resources": {
+    "AspNetCoreFunction": {
+      "Type": "AWS::Serverless::Function",
+      "Properties": {
+        "PackageType": "Image",
+        "ImageConfig": {
+          "WorkingDirectory": "/app"
+        },
+        "Timeout": 30,
+        "MemorySize": 512,
+        "Events": {
+          "ProxyResource": {
+            "Type": "HttpApi",
+            "Properties": {
+              "Path": "/{proxy+}",
+              "Method": "ANY"
+            }
+          },
+          "RootResource": {
+            "Type": "HttpApi",
+            "Properties": {
+              "Path": "/",
+              "Method": "ANY"
+            }
+          }
+        }
+      },
+      "Metadata": {
+        "DockerContext": ".",
+        "Dockerfile": "Dockerfile"
+      }
+    }
+  },
+  "Outputs": {
+    "ApiURL": {
+      "Description": "The public URL of your live ASP.NET Core website",
+      "Value": {
+        "Fn::Sub": "https://${ServerlessHttpApi}.execute-api.${AWS::Region}://"
+      }
+    }
+  }
+}
