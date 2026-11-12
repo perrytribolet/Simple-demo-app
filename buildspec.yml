@@ -1,8 +1,8 @@
 ﻿version: 0.2
 phases:
   install:
-    runtime-versions:
-      dotnet: 10
+    commands:
+      - pip install --upgrade aws-sam-cli
   build:
     commands:
       - sam build
