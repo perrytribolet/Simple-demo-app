@@ -7,7 +7,7 @@
       "Type": "AWS::Serverless::Function",
       "Properties": {
         "Handler": "MyApp",
-        "Runtime": "dotnet10",
+        "Runtime": "dotnet8",
         "CodeUri": "",
         "Timeout": 30,
         "MemorySize": 512,
