@@ -25,8 +25,7 @@ app.UseRouting();
 
 app.UseAuthorization();
 app.UseStaticFiles();// Critical for serving static assets from the wwwroot folder in your project. This is required for Razor Pages to work correctly.
-app.MapStaticAssets();
-app.MapRazorPages()
-   .WithStaticAssets();
+//app.MapStaticAssets();
+app.MapRazorPages();//.WithStaticAssets();
 
 app.Run();
