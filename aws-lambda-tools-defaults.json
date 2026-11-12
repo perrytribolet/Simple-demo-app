@@ -5,7 +5,7 @@
   "profile": "default",
   "region": "us-east-2",
   "configuration": "Release",
-  "framework": "net10.0",
+  "framework": "net8",
   //"package-type": "image",
   "s3-bucket": "tribolet-demo-bucket",
   "stack-name": "MyModernNetWebsiteStack",
