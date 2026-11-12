@@ -5,7 +5,7 @@ phases:
       - pip install --upgrade aws-sam-cli
   build:
     commands:
-      - sam build
+      - sam build --template serverless.template
       - sam package --s3-bucket "tribolet-demo-bucket" --output-template-file packaged.yaml
 artifacts:
   files:
